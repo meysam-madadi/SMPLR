@@ -31,15 +31,18 @@ Download Pascal VOC dataset and uncompress it in ./Data directory. This is neede
 
 ### Run the code
 #### Training
+SMPL files and pre-trained models can be downloaded from [here](https://cvcuab-my.sharepoint.com/:u:/g/personal/mmadadi_cvc_uab_cat/EfipGjiSinBBl0FN_6qk9_IB0cA5w8kAiUS7BoRu0YUTNw?e=DaHkN5).
+Then it must be unzipped within the code root directory.
+
 We have provided an script to train the whole model sequentially from scratch.
 ```
 python train_all.py GPU_ID
 ```
 Note that Stack Hourglass Network takes a lot of time to converge (>10 days).
 
+
 #### Test
-Pre-trained networks can be downloaded [here](). They must be placed in ./tmp/checkpoints/. Then to validate the 
-model run:
+To validate the model run:
 ```
 python test.py GPU_ID SHN_checkpoint_name DAE_checkpoint_name SMPLR_checkpoint_name
 ```
